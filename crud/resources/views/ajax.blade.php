@@ -1,5 +1,5 @@
 <h4 class="label-new-person">Edit Person</h4>
-<form action="/update" role="form" method="POST">
+<form action="update" role="form" method="POST">
 
 <div class="form-group" style="display: none;">
     <input type="hidden" name="IDPerson" id="id" class="form-control" value="{{ $person->IDPerson }}">

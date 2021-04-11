@@ -42,7 +42,7 @@ $(document).ready(function() {
 
             <h4 class="label-new-person">Add New Person</h4>
    
-                <form action="/" role="form" method="POST">
+                <form action="" role="form" method="POST">
 
                     <div class="form-group" style="display: none;">
                         <input type="hidden" name="id" id="id" class="form-control">
