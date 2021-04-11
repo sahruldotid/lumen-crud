@@ -1,8 +1,10 @@
+var path = window.location;
+
 $(document).ready(function(){
                 $('.edit').click(function(){
                     var userid = $(this).data('id');
                     $.ajax({
-                        url: 'ajax',
+                        url: path+'ajax',
                         type: 'post',
                         data: {id: userid},
                         success: function(response){ 
@@ -17,7 +19,7 @@ $(document).ready(function(){
                 $('.view').click(function(){
                     var userid = $(this).data('id');
                     $.ajax({
-                        url: 'detail',
+                        url: path+'detail',
                         type: 'post',
                         data: {id: userid},
                         success: function(response){ 
@@ -41,14 +43,14 @@ $(document).ready(function(){
       formData.append('file', files)
       formData.append('person', person);
       $.ajax({
-         url  : "upload",
+         url  : path+"upload",
          type : "POST",
          cache: false,
          contentType : false, // you can also use multipart/form-data replace of false
          processData: false,
          data: formData,
          success:function(response){
-            $("#profile").attr("src","images/"+person+'/'+filename);
+            $("#profile").attr("src",path+"images/"+person+'/'+filename);
             
          },
          error:function(response){
