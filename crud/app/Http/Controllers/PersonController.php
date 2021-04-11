@@ -77,15 +77,15 @@ class PersonController extends Controller
             'person' => 'required'
 		]);
         $file = $request->file('file');
-        $tujuan_upload = 'images';
+        $tujuan_upload = 'images/'.$request->person;
         
         
-        if(file_exists("images/".$file->getClientOriginalName())){
-            unlink("images/".$file->getClientOriginalName());
+        if(file_exists("images/".$request->person.'/'.$file->getClientOriginalName())){
+            unlink("images/".$request->person.'/'.$file->getClientOriginalName());
         }
         $file->move($tujuan_upload,$file->getClientOriginalName());
         $update = DB::table('Person_003')->where('IDPerson',$request->person)->update([
-            'image' => $file->getClientOriginalName()
+            'image' => $request->person.'/'.$file->getClientOriginalName()
         ]);
 	}
 

@@ -48,7 +48,7 @@ $(document).ready(function(){
          processData: false,
          data: formData,
          success:function(response){
-            $("#profile").attr("src","images/"+filename);
+            $("#profile").attr("src","images/"+person+'/'+filename);
             
          },
          error:function(response){
