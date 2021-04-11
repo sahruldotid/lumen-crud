@@ -158,9 +158,9 @@ $(document).ready(function() {
                             <a href="#" class="view" title="View" data-id="{{ $p->IDPerson }}" data-tooltip="tooltip" data-toggle="modal" data-target=".view-modal"><i class="material-icons">&#xE417;</i></a>
                             <a href="#" class="edit" title="Edit" data-id="{{ $p->IDPerson }}" data-tooltip="tooltip" data-toggle="modal" data-target=".edit-modal"><i class="material-icons">&#xE254;</i></a>
                             @if($p->IsActive == 1)
-                            <a href="/status/{{ $p->IDPerson }}" class="active" title="Deactive" data-tooltip="tooltip"><span class="material-icons">person</span></a>
+                            <a href="status/{{ $p->IDPerson }}" class="active" title="Deactive" data-tooltip="tooltip"><span class="material-icons">person</span></a>
                             @else
-                            <a href="/status/{{ $p->IDPerson }}" class="inactive" title="Activate" data-tooltip="tooltip"><span class="material-icons">person_off</span></a>
+                            <a href="status/{{ $p->IDPerson }}" class="inactive" title="Activate" data-tooltip="tooltip"><span class="material-icons">person_off</span></a>
                             @endif
                         </td>
                     </tr>  

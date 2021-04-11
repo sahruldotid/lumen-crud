@@ -2,7 +2,7 @@ $(document).ready(function(){
                 $('.edit').click(function(){
                     var userid = $(this).data('id');
                     $.ajax({
-                        url: '/ajax',
+                        url: 'ajax',
                         type: 'post',
                         data: {id: userid},
                         success: function(response){ 
@@ -17,7 +17,7 @@ $(document).ready(function(){
                 $('.view').click(function(){
                     var userid = $(this).data('id');
                     $.ajax({
-                        url: '/detail',
+                        url: 'detail',
                         type: 'post',
                         data: {id: userid},
                         success: function(response){ 
